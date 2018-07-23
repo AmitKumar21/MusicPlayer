@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="colorPrimary">#03a9f4</color>
-    <color name="colorPrimaryDark">#03a9f4</color>
-    <color name="primary_light">#FFCDD2</color>
-    <color name="colorAccent">#03A9F4</color>
-    <color name="primary_text">#212121</color>
-    <color name="secondary_text">#727272</color>
-    <color name="icons">#ffffff</color>
-    <color name="divider">#b6b6b6</color>
-
-
-    <color name="transparent_black">#aa000000</color>
-
-    <!-- selected tab text -->
-    <color name="selected_tabtext">#bb000000</color>
-
-    <!-- non selected tab text -->
-    <color name="unselected_tabtext">#77000000</color>
-    <color name="shuffle_grey">#ffdedede</color>
-    <color name="background_grey">#ffdedede</color>
-
-    <!-- Transparent -->
-    <color name="transparent">#00000000</color>
-
-    <!-- Black -->
-    <color name="black">#ff000000</color>
-
-    <!-- White -->
-    <color name="white">#ffffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="green">#05590f</color>
 </resources>

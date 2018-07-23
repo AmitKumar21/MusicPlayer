@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.amk52.mp3play">
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    package="com.example.amk52.unimp3">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +18,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MediaPlayerService"/>
+        <activity
+            android:name=".AudioPlayerActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <service
+            android:name=".SongService"
+            android:exported="true"
+            android:enabled="true"/>
+        <receiver android:name=".NotificationBroadcast" >
+            <intent-filter>
+                <action android:name="com.example.amk52.unimp3.delete" />
+                <action android:name="com.example.amk52.unimp3.pause" />
+                <action android:name="com.example.amk52.unimp3.next" />
+                <action android:name="com.example.amk52.unimp3.play" />
+                <action android:name="com.example.amk52.unimp3.previous" />
+                <action android:name="com.example.amk52.unimp3.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
